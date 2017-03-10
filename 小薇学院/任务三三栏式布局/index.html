@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>三栏式布局</title>
+		<style type="text/css">
+			*{margin: 0px;padding: 0px;}
+			body{
+				padding: 20px;
+			}
+			#main{
+				height: auto;
+				background: lightgray;
+				padding: 20px;
+				overflow: hidden;
+				border:1px solid #999 ;
+				display: flex;
+				align-items: flex-start; //将中间div的高度自适应
+			}
+			#intro,#logo,#photo{
+				border:1px solid darkgray ;
+				background: white;
+			}
+			#logo{
+				width: 200px;height: 120px;
+				margin-right:20px ;
+			}
+			#photo{
+				width: 120px;
+				margin-left:20px ;
+			}
+			#intro{
+				height: auto;
+				flex: 1;
+			}
+			#intro h3,h4,p{
+				line-height: 2em;
+			}
+			img{
+				width: 80px;height: 80px;
+				margin-top: 20px;margin-left: 20px;
+			}
+			img:last-child{margin-bottom: 20px;}
+			#logo img{
+				display: inline-block;
+			}
+			#logo p{display: block;float: right;margin: 20px 20px 0px 0px;}
+		</style>
+	</head>
+	<body>
+		<div id="main">
+			<div id="logo">
+				<img src="#" alt="团队logo"/>
+				<p>团队名称</p>
+			</div>
+			<div id="intro">
+				<h3>介绍一个我的团队</h3>
+				<p>这是团队介绍这是团队介绍这是团队介绍这是团队介绍
+				这是团队介绍这是团队介绍这是团队介绍这是团队介绍
+				这是团队介绍这是团队介绍这是团队介绍这是团队介绍
+				这是团队介绍这是团队介绍这是团队介绍这是团队介绍
+				</p>
+				<h4>另一个小介绍</h4>
+				<p>这是团队介绍这是团队介绍这是团队介绍这是团队介绍
+				这是团队介绍这是团队介绍这是团队介绍这是团队介绍
+				这是团队介绍这是团队介绍这是团队介绍这是团队介绍
+				这是团队介绍这是团队介绍这是团队介绍这是团队介绍
+				</p>
+			</div>
+			<div id="photo">
+				<img src="#" alt="个人logo"/>
+				<img src="#" alt="个人logo"/>
+				<img src="#" alt="个人logo"/>
+				<img src="#" alt="个人logo"/>
+			</div>
+		</div>
+	</body>
+</html>
