@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{padding: 0px;margin: 0px;}
+			body{background: lightgrey;}
+			#headdiv{width: 100%;height: 60px;line-height: 60px;
+			background: darkslategrey;color: white;position: relative;
+			}
+			#mainnav{position: absolute;right: 0px;}
+			#mainnav a{text-decoration: none;color: white;}
+			#mainnav li:last-child a{color: darkgrey;}
+			#mainnav li{float: left;margin-right: 20px;list-style-type: none;}
+			#headdiv img{width: 30%;height: 60px;display: block;float: left;}
+			
+			footer{
+				width: 100%;height: 80px;line-height: 80px;
+				margin-top: 20px;
+				background: black;color: white;
+				text-align: center;
+				font-size: 18px;
+			}
+			
+			article{
+				width: 60%;padding: 20px;
+				border: 1px solid darkgray;
+				background: white;
+				box-shadow: 2px 2px 2px darkgrey;
+				margin: 20px;
+				font-family: 黑体;
+			}
+			article p,h1,h2{line-height: 2em;}
+			article h2,address{color: darkgrey;}
+			article a{color: blue;font-size: bold;}
+			#a2 ul{list-style-type: none;margin: 20px;}
+			#a2 ul li{line-height: 2em;}
+			
+			#f1{height:800px ;}
+			#f1 figure{width: 200px;height: 200px;
+				float: left;
+				border: 1px solid darkgray;margin: 10px;
+			}
+			#f1 img{
+				width: 95%;height: 85%;margin: auto;
+			}
+			#f1 figure:last-child{clear: both;}
+			
+			#a3 ol{list-style-type: none;margin: 20px;}
+			#a3 table{
+				width: 99%;margin: 0px auto;
+				border-spacing: 0px;
+			}
+			#a3 td{border: 1px solid darkgray;}
+			#a3 thead{background: darkslategrey;color: white;}
+			#a3 tfoot{background: darkgray;}
+			
+			#asi1{box-sizing: border-box;
+				width: 30%;border: 1px solid darkgray;background: white;
+				box-shadow: 2px 2px 2px darkgray;
+			}
+			#asi1 table{border: none;}
+			#asi1 td{
+				border: none;
+			}
+			#asi1 td:first-child{text-align: right;}
+			#asi1 .warn{color: darkgrey;}
+			input[type='submit']{
+				width: 99%;height: 40px;background: dodgerblue;
+				border-radius: 5px;line-height: 40px;
+				font-size: 20px;color: white;
+			}
+			#asi1{
+				position: fixed;
+				right: 0px;top: 60px;
+				margin: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<div id="headdiv">
+				<img src="#" alt="网站一级标题"/>
+				<nav>
+					<ul id="mainnav">
+						<li><a href="#a1">导航链接一</a></li>
+						<li><a href="#a2">导航链接二</a></li>
+						<li><a href="#f1">导航链接三</a></li>
+						<li><a href="#a3">导航链接四</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<article id="a1">
+			<h1>文章一级标题</h1>
+			<h2>文章二级标题</h2>
+			<address>
+				<cite>文章作者</cite> 文章发表时间<time datetime="2017-03-09" pubdate="true"></time>
+			</address>
+			<p>这是一个很长很长的段落，这是一个很长很长很长的段落，
+				这是一个很长很长的段落，这是一个很长很长很长的段落，
+				这是一个很长很长的段落，这是一个很长很长很长的段落，
+				换行了……
+			</p>
+			<p>这是一个很长很长的段落，这是一个很长很长很长的段落，
+				这是一个很长很长的段落，这是一个很长很长很长的段落，
+				换行了……
+			</p>
+			<p>这是一个很长很长的段落，这是一个很长很长很长的段落，
+				这里有一个超链接到<a href="http://ife.baidu.com">http://ife.baidu.com</a>,
+				这是一个很长很长的段落，这是一个很长很长很长的段落，
+				这是一个很长很长的段落，这是一个很长很长很长的段落，
+				<b>这里有个粗体字</b>这是一个很长很长的段落，这是一个很长很长很长的段落，
+				这是一个很长很长的段落，这是一个很长很长很长的段落，
+				这是一个很长很长的段落，这是一个很长很长很长的段落，
+				换行了……
+			</p>
+			<img src="photo.png" alt="这是张很美的图片" />
+			<p>这是一个很长很长的段落，这是一个很长很长很长的段落，
+				这里有一个超链接用新窗口打开到<a href="http://ife.baidu.com" target="_blank">http://ife.baidu.com</a>,
+				这是一个很长很长的段落，这是一个很长很长很长的段落，
+				这是一个很长很长的段落，这是一个很长很长很长的段落，
+				<b>这里有个粗体字</b>这是一个很长很长的段落，这是一个很长很长很长的段落，
+				这是一个很长很长的段落，这是一个很长很长很长的段落，
+				这是一个很长很长的段落，这是一个很长很长很长的段落，
+				换行了……
+			</p>
+		</article>
+		<article id="a2">
+			<h1>另一篇文章一级标题</h1>
+			<h2>文章二级标题</h2>
+			<address>
+				<cite>文章作者</cite> 文章发表时间<time datetime="2017-03-09" pubdate="false"></time>
+			</address>
+			<p>这是一个很长很长的段落，这是一个很长很长很长的段落，
+				这是一个很长很长的段落，这是一个很长很长很长的段落，
+				换行了……
+			</p>
+			<p>这是一个很长很长的段落，这是一个很长很长很长的段落，
+				这里有一个超链接用新窗口打开到<a href="http://ife.baidu.com" target="_blank">http://ife.baidu.com</a>,
+				这是一个很长很长的段落，这是一个很长很长很长的段落，
+				这是一个很长很长的段落，这是一个很长很长很长的段落，
+				<b>这里有个粗体字</b>这是一个很长很长的段落，这是一个很长很长很长的段落，
+				这是一个很长很长的段落，这是一个很长很长很长的段落，
+				这是一个很长很长的段落，这是一个很长很长很长的段落，
+				换行了……
+			</p>
+			<img src="photo.png"/>
+			<ul>
+				<li>列表项目一</li>
+				<li>列表项目二</li>
+				<li>列表项目三</li>
+			</ul>
+			
+		</article>
+		<article id="f1">
+				<h1>图片</h1>
+				<figure>
+					<figcaption>好看的图片</figcaption>
+					<img src="photo.png"/>
+				</figure>
+				<figure>
+					<figcaption>好看的图片</figcaption>
+					<img src="photo.png"/>
+				</figure>
+				<figure>
+					<figcaption>好看的图片</figcaption>
+					<img src="photo.png"/>
+				</figure>
+				<figure>
+					<figcaption>好看的图片</figcaption>
+					<img src="photo.png"/>
+				</figure>
+				<figure>
+					<figcaption>好看的图片</figcaption>
+					<img src="photo.png"/>
+				</figure>
+				<figure>
+					<figcaption>好看的图片</figcaption>
+					<img src="photo.png"/>
+				</figure>
+				<figure>
+					<figcaption>好看的图片</figcaption>
+					<img src="photo.png"/>
+				</figure>
+		</article>
+		<article id="a3">
+			<h1>最后一篇文章一级标题</h1>
+			<h2>文章二级标题</h2>
+			<address>
+				<cite>文章作者</cite> 文章发表时间<time datetime="2017-03-09" pubdate="false"></time>
+			</address>
+			<ol>
+				<li>排名1</li>
+				<li>排名2</li>
+				<li>排名3</li>
+			</ol>
+			<section>
+				<p>下面是一个表格</p>
+				<table border="1">
+					<thead>
+						<tr>
+							<td>表头</td><td>表头</td><td>表头</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>表内容单元格</td><td>表内容单元格</td><td><a href="#">操作</a></td>
+						</tr>
+						<tr>
+							<td>表内容单元格</td><td>表内容单元格</td><td><a href="#">操作</a></td>
+						</tr>
+						<tr>
+							<td>表内容单元格</td><td>表内容单元格</td><td><a href="#">操作</a></td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<td>总计</td><td colspan="2">1000</td>
+						</tr>
+					</tfoot>
+				</table>
+			</section>
+		</article>
+		<aside id="asi1">
+			<h2>这以后是一个侧栏</h2>
+			<form action="" method="post">
+				<!--<h2>侧栏注册窗口标题</h2>-->
+				<table border="" cellspacing="" cellpadding="">
+					<tr><td>请输入邮箱地址：</td><td><input type="email" value="" placeholder="这是一个文本输入框"/></td></tr>
+					<tr><td></td><td><span class="warn">邮箱地址请按要求格式输入</span></td></tr>
+					<tr><td>请输入密码:</td><td> <input type="password" placeholder="这是一个文本输入框"/></td></tr>
+					<tr><td>请重复输入密码：</td><td><input type="password" placeholder="这是一个文本输入框"/></td></tr>
+					<tr><td></td><td ><span class="warn">密码请为6-16位英文数字</span></td></tr>
+					<tr><td>性别： </td><td><input type="radio" name="gender" value="male"/>男 
+					<input type="radio" name="gender" value="female"/>女</td></tr>
+					<tr><td>城市:</td><td><select name="city" ><option value="BeiJing">北京</option>	</select></td></tr>
+					<tr><td>爱好: </td><td><input type="checkbox" name="habit" value="sports" />运动
+					<input type="checkbox" name="habit" value="art"/>艺术
+					<input type="checkbox" name="habit" value="science"/>科学</td></tr>
+					<tr><td>个人描述:</td><td><textarea name="des" rows="5" cols="20"></textarea></td></tr>
+				</table>
+				<input type="submit" value="确认提交" />
+			</form>
+		</aside>
+		<footer>版权所有©</footer>
+	</body>
+</html>
