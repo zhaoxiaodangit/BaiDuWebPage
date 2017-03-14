@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{padding: 0px;margin: 0px;}
+			#rightin{margin-right: 20px;}
+			input{border-radius: 10px;background: white;font-size: 14px;line-height: 16px;font-family: "黑体";}
+			#show{
+				margin-top: 10px;
+				width: 100%;height: 200px;border: none;
+				display: flex;
+				background: none;
+			}
+			div{
+				width: 50px;height: 50px;line-height: 50px;font-size: 40px;text-align: center;
+				background: lightcoral;font-family: "微软雅黑";border: 1px solid saddlebrown;
+				margin: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="text" id="num"/>
+		<input type="button" value="左侧入" id="leftin"/>
+		<input type="button" value="右侧入" id="rightin"/>
+		<input type="button" value="左侧出" id="leftout"/>
+		<input type="button" value="右侧出" id="rightout"/>
+		<div id="show">
+		</div>
+		
+		<script type="text/javascript">
+			var ar=[];
+			
+			function init(){
+				var div=document.getElementById('show');
+				div.innerHTML='';
+				if(ar.length==0){return false}
+				else{
+					for(var i=0,len=ar.length;i<len;i++){
+						show(ar[i])
+					}
+				}
+			}
+			
+			function rightin(){
+				var s1=document.getElementById('num').value;
+				
+				if(s1==''){return false;}
+				if(s1.indexOf(',')!=-1){
+					ar=s1.split(',');
+				}else ar.push(s1);
+				init();
+			}
+			
+			function leftin(){
+				var s1=document.getElementById('num').value;
+				
+				if(s1==''){return false;}
+				if(s1.indexOf(',')!=-1){
+					ar=s1.split(',');
+				}else ar.unshift(s1);
+				init();
+			}
+			
+			function rightout(){
+				var s=ar.pop();
+				alert(s);
+				init();
+			}
+			
+			function leftout(){
+				var s=ar.shift();
+				alert(s);
+				init()
+			}
+			
+			//显示数据
+			function show(num){
+				var div=document.getElementById('show');
+				var cdiv=document.createElement('div');
+				cdiv.innerHTML=num;
+				div.appendChild(cdiv)
+			}
+			
+			
+			//window的onload事件
+			window.onload=function(){
+				init();
+				var btn1=document.getElementById('leftin');
+				btn1.onclick=leftin;
+				var btn2=document.getElementById('rightin');
+				btn2.onclick=rightin;
+				var btn3=document.getElementById('leftout');
+				btn3.onclick=leftout;
+				var btn4=document.getElementById('rightout');
+				btn4.onclick=rightout;
+			}
+		</script>
+		
+	</body>
+</html>
