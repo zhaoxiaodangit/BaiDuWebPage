@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{padding: 0px;margin: 0px;}
+			#div0{
+				width: 100%;height: 100px;
+				vertical-align: top;
+				background: none;border: none;
+				display: flex;
+				align-items: center;
+			}
+			#rightin,#rightout{margin-right: 20px;}
+			input{float: left;width: 60px;height: 20px;line-height: 20px;}
+			textarea{border-radius: 10px;background: white;font-size: 14px;line-height: 16px;font-family: "黑体";}
+			#show{
+				margin-top: 10px;
+				width: 100%;height: 200px;border: none;
+				display: flex;
+				background: none;
+			}
+			li{
+				display: block;float: left;width: 50px;height: 50px;line-height: 50px;font-size: 40px;text-align: center;
+				background: lightblue;font-family: "微软雅黑";border: 1px solid saddlebrown;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div0">
+			<textarea id="text" rows="5" cols="20"></textarea>
+		<input type="button" value="左侧入" id="leftin"/>
+		<input type="button" value="右侧入" id="rightin"/>
+		<input type="button" value="左侧出" id="leftout"/>
+		<input type="button" value="右侧出" id="rightout"/>
+		<input type="button" value="查  询" id="check"/>
+		</div>
+		<div id="show">
+			<ul id="ul"></ul>
+		</div>
+		
+		<script type="text/javascript">
+			document.addEventListener('click',function(e){
+				var ta=e.target.id;
+				//alert(ta);
+				e.stopPropagation();
+				switch(ta){
+					case "leftin":
+					 	addAll("leftin");
+					 	break;
+					 case 'rightin':
+					 	addAll("rightin");
+					 	break;
+					 case "leftout":
+					 	remove("leftout");
+					 	break;
+					 case "rightout":
+					 	remove("rightout");
+					 	break;
+					 case "check":
+					 	check();
+					 	break;
+					 default:
+					 	break;
+				}
+			})
+			function add(method,st){
+				var ul=document.getElementById('ul');
+				
+				if(method=='leftin'){
+					var li=document.createElement('li');
+					li.innerHTML=st;
+					ul.appendChild(li);
+				}else{					
+					var sr="<li>"+st+"</li>";
+					sr=sr+ul.innerHTML;
+					ul.innerHTML=sr;
+				}
+			}
+			function addAll(method){
+				var tx=document.getElementById('text').value;
+				var ar=tx.split(/[^\w]/);
+				for(var i=0,len=ar.length;i<len;i++){
+					add(method,ar[i]);
+				}
+			}
+			function remove(method){
+				var ul=document.getElementById('ul');
+				if(method=="leftout"){
+					ul.removeChild(ul.firstChild);
+				}else{
+					ul.removeChild(ul.lastChild);
+				}
+			}
+			function check(){
+				var tx=document.getElementById('text').value;
+				var ar=tx.split(/[^\w]/);
+				var ul=document.getElementById('ul');
+				var lis=ul.childNodes;
+				for(var i=0,len=lis.length;i<len;i++){
+					lis[i].style.background='lightblue';
+					if(ar.indexOf(lis[i].innerHTML)>-1){
+						lis[i].style.background='lightcoral';
+					}
+				}
+			}
+		</script>
+		
+	</body>
+</html>
